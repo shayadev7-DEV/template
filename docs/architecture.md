@@ -13,10 +13,6 @@ src/
   ProjectName.Infrastructure    # Repository/UoW, cache, logging adapter, auth provider strategies
   ProjectName.Persistence       # DbContext, Identity, EF configurations, seed/migration strategy
   ProjectName.Shared            # Cross-cutting constants and options models
-tests/
-  ProjectName.UnitTests
-  ProjectName.IntegrationTests
-  ProjectName.ArchitectureTests
 ```
 
 ## 2. Dependency Diagram
@@ -91,15 +87,18 @@ Filters: GlobalExceptionFilter, AuditActionFilter, ValidationFilter.
 Middleware: CorrelationId, SecurityHeaders, ExceptionHandling.
 Razor: Views, Shared layout, validation partials, area views.
 
-## 9. Security
+## 9. OWASP Top 10 Security Alignment
 
-- CSRF: AutoValidateAntiforgeryToken and explicit ValidateAntiForgeryToken.
-- XSS/CSP: strict security headers middleware.
-- Secure cookies: `__Host-` cookie, HttpOnly, Secure, SameSite Strict.
-- Password policy and lockout: configured in Identity options.
-- Data Protection: registered in Presentation.
-- Rate limiting: global fixed-window limiter.
-- Correlation id and RFC7807 ProblemDetails for incident traceability.
+- **A01 Broken Access Control**: role, policy, and permission based authorization are centralized and enforced with dynamic policies.
+- **A02 Cryptographic Failures**: HTTPS redirection, HSTS, secure cookies, and ASP.NET Core Data Protection are enabled.
+- **A03 Injection**: EF Core parameterization, strongly typed DTOs, value objects, and FluentValidation reduce injection risk.
+- **A04 Insecure Design**: Clean Architecture boundaries keep business rules in Domain and security rules in dedicated middleware/policies.
+- **A05 Security Misconfiguration**: Kestrel server header is disabled, request size is limited, and secure defaults are configured centrally.
+- **A06 Vulnerable and Outdated Components**: package versions are centrally managed to support controlled dependency upgrades.
+- **A07 Identification and Authentication Failures**: strong password policy, unique email, lockout, secure cookie settings, and hybrid auth provider strategy are configured.
+- **A08 Software and Data Integrity Failures**: anti-forgery validation is enabled globally for MVC form posts.
+- **A09 Security Logging and Monitoring Failures**: correlation id middleware and logging abstraction support centralized monitoring without coupling business code to a vendor.
+- **A10 Server-Side Request Forgery**: external service abstractions keep outbound calls behind vetted infrastructure adapters.
 
 ## 10. Performance
 
@@ -109,7 +108,12 @@ Razor: Views, Shared layout, validation partials, area views.
 - Response caching and output caching middleware registered.
 - Cache abstraction supports memory or distributed providers.
 
-## 11. Best Practices and Future Scalability
+## 11. User Management Views
+
+- `/Admin/User/Index` renders the user list with Bootstrap card/table layout, empty-state messaging, and a create-user entry point.
+- `/Admin/User/Create` renders a validated user creation form with anti-forgery protection, maxlength constraints, enum dropdowns, and Bootstrap validation styling.
+
+## 12. Best Practices and Future Scalability
 
 - Add OpenTelemetry adapter for `IApplicationLogger` and distributed traces when observability requirements mature.
 - Move permission lookups from cache placeholder to database + cache-aside strategy.

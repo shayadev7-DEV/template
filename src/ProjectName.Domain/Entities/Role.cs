@@ -5,19 +5,42 @@ namespace ProjectName.Domain.Entities;
 public sealed class Role : AggregateRoot
 {
     private readonly List<RolePermission> _permissions = [];
-    private Role() { Name = string.Empty; NormalizedName = string.Empty; }
-    private Role(string name) { Name = name.Trim(); NormalizedName = Name.ToUpperInvariant(); }
+
+    private Role()
+    {
+        Name = string.Empty;
+        NormalizedName = string.Empty;
+    }
+
+    private Role(string name)
+    {
+        Name = name.Trim();
+        NormalizedName = Name.ToUpperInvariant();
+    }
+
     public string Name { get; private set; }
+
     public string NormalizedName { get; private set; }
+
     public IReadOnlyCollection<RolePermission> Permissions => _permissions.AsReadOnly();
+
     public static Role Create(string name)
     {
-        if (string.IsNullOrWhiteSpace(name)) throw new DomainRuleException("Role name is required.");
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new DomainRuleException("Role name is required.");
+        }
+
         return new Role(name);
     }
+
     public void GrantPermission(Guid permissionId)
     {
-        if (_permissions.Any(x => x.PermissionId == permissionId)) return;
+        if (_permissions.Any(x => x.PermissionId == permissionId))
+        {
+            return;
+        }
+
         _permissions.Add(RolePermission.Create(Id, permissionId));
     }
 }

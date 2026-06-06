@@ -2,13 +2,66 @@
 @{
     ViewData["Title"] = "Create user";
 }
-<h1>Create user</h1>
-<form asp-action="Create" method="post">
-  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-  <div class="mb-3"><label asp-for="FirstName" class="form-label"></label><input asp-for="FirstName" class="form-control" /><span asp-validation-for="FirstName" class="text-danger"></span></div>
-  <div class="mb-3"><label asp-for="LastName" class="form-label"></label><input asp-for="LastName" class="form-control" /><span asp-validation-for="LastName" class="text-danger"></span></div>
-  <div class="mb-3"><label asp-for="Email" class="form-label"></label><input asp-for="Email" class="form-control" /><span asp-validation-for="Email" class="text-danger"></span></div>
-  <div class="mb-3"><label asp-for="MobileNumber" class="form-label"></label><input asp-for="MobileNumber" class="form-control" /><span asp-validation-for="MobileNumber" class="text-danger"></span></div>
-  <button class="btn btn-success" type="submit">Save</button>
-</form>
-@section Scripts { <partial name="_ValidationScriptsPartial" /> }
+
+<div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-7">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <h1 class="h4 mb-1">Create user</h1>
+                <p class="text-muted mb-0">Enter validated profile information for a new application user.</p>
+            </div>
+            <div class="card-body">
+                <form asp-area="Admin" asp-controller="User" asp-action="Create" method="post" autocomplete="off" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="FirstName" class="form-label"></label>
+                            <input asp-for="FirstName" class="form-control" maxlength="100" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="LastName" class="form-label"></label>
+                            <input asp-for="LastName" class="form-control" maxlength="100" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" class="form-control" maxlength="256" inputmode="email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="MobileNumber" class="form-label"></label>
+                            <input asp-for="MobileNumber" class="form-control" maxlength="20" inputmode="tel" />
+                            <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="UserType" class="form-label"></label>
+                            <select asp-for="UserType" asp-items="Html.GetEnumSelectList<ProjectName.Domain.Enums.UserType>()" class="form-select"></select>
+                            <span asp-validation-for="UserType" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Gender" class="form-label"></label>
+                            <select asp-for="Gender" asp-items="Html.GetEnumSelectList<ProjectName.Domain.Enums.Gender>()" class="form-select"></select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 mt-4">
+                        <a class="btn btn-outline-secondary" asp-area="Admin" asp-controller="User" asp-action="Index">
+                            Cancel
+                        </a>
+                        <button class="btn btn-success" type="submit">
+                            Save user
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
