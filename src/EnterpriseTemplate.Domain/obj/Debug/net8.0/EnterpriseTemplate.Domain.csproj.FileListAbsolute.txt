@@ -1,0 +1,14 @@
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\bin\Debug\net8.0\EnterpriseTemplate.Domain.deps.json
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\bin\Debug\net8.0\EnterpriseTemplate.Domain.dll
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\bin\Debug\net8.0\EnterpriseTemplate.Domain.pdb
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\bin\Debug\net8.0\EnterpriseTemplate.Domain.xml
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.AssemblyInfoInputs.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.AssemblyInfo.cs
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.csproj.CoreCompileInputs.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.sourcelink.json
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.dll
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\refint\EnterpriseTemplate.Domain.dll
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.xml
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\EnterpriseTemplate.Domain.pdb
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Domain\obj\Debug\net8.0\ref\EnterpriseTemplate.Domain.dll

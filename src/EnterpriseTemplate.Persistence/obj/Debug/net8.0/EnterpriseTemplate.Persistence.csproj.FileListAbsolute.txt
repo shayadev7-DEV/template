@@ -1,0 +1,6 @@
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Persistence\obj\Debug\net8.0\EnterpriseTemplate.Persistence.csproj.AssemblyReference.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Persistence\obj\Debug\net8.0\EnterpriseTemplate.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Persistence\obj\Debug\net8.0\EnterpriseTemplate.Persistence.AssemblyInfoInputs.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Persistence\obj\Debug\net8.0\EnterpriseTemplate.Persistence.AssemblyInfo.cs
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Persistence\obj\Debug\net8.0\EnterpriseTemplate.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Persistence\obj\Debug\net8.0\EnterpriseTemplate.Persistence.sourcelink.json

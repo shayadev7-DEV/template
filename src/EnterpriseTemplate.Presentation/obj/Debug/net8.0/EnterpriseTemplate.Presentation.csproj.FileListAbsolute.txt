@@ -1,0 +1,9 @@
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.csproj.AssemblyReference.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.AssemblyInfoInputs.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.AssemblyInfo.cs
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.RazorAssemblyInfo.cache
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.RazorAssemblyInfo.cs
+C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.sourcelink.json

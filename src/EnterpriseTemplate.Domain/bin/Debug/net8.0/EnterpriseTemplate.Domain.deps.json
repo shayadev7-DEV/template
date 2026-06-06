@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EnterpriseTemplate.Domain/1.0.0": {
+        "runtime": {
+          "EnterpriseTemplate.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EnterpriseTemplate.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

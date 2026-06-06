@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnterpriseTemplate.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:EnterpriseTemplate.Domain.Abstractions.IAggregateRoot">
+            <summary>
+            Marks an entity as an aggregate root in the domain model.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Abstractions.IDomainEvent">
+            <summary>
+            Represents a business event raised by an aggregate.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Abstractions.IDomainEvent.OccurredOnUtc">
+            <summary>
+            Gets the UTC date when the event occurred.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Abstractions.IEntity">
+            <summary>
+            Defines the minimum contract for a domain entity with a stable identity.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Abstractions.IEntity.Id">
+            <summary>
+            Gets the unique identifier of the entity.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Authorization.Permission">
+            <summary>
+            Permission granted to roles and resolved dynamically as policies.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Authorization.Permission.#ctor(System.String,System.String,EnterpriseTemplate.Domain.Enums.PermissionType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Authorization.Permission"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.Permission.Name">
+            <summary>
+            Gets the display name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.Permission.Code">
+            <summary>
+            Gets the unique permission code.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.Permission.Type">
+            <summary>
+            Gets the permission type.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Authorization.Role">
+            <summary>
+            Domain role aggregate used for permission assignments.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Authorization.Role.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Authorization.Role"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.Role.Name">
+            <summary>
+            Gets the role name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.Role.RolePermissions">
+            <summary>
+            Gets role permissions.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Authorization.RolePermission">
+            <summary>
+            Join entity connecting roles and permissions.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.RoleId">
+            <summary>
+            Gets or sets the role identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.PermissionId">
+            <summary>
+            Gets or sets the permission identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.Role">
+            <summary>
+            Gets or sets the role.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.Permission">
+            <summary>
+            Gets or sets the permission.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Common.AggregateRoot">
+            <summary>
+            Base aggregate root for consistency boundaries.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Common.AuditableEntity">
+            <summary>
+            Entity with auditing metadata and soft-delete state.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.CreatedBy">
+            <summary>
+            Gets or sets the user that created the entity.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.CreatedDate">
+            <summary>
+            Gets or sets the UTC creation date.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.ModifiedBy">
+            <summary>
+            Gets or sets the user that last modified the entity.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.ModifiedDate">
+            <summary>
+            Gets or sets the UTC modification date.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.DeletedBy">
+            <summary>
+            Gets or sets the user that deleted the entity.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.DeletedDate">
+            <summary>
+            Gets or sets the UTC deletion date.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.AuditableEntity.IsDeleted">
+            <summary>
+            Gets or sets a value indicating whether the entity is soft deleted.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Common.BaseEntity">
+            <summary>
+            Base entity that stores identity and domain events.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Common.BaseEntity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Common.BaseEntity"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.BaseEntity.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Common.BaseEntity.DomainEvents">
+            <summary>
+            Gets domain events raised by the entity.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Common.BaseEntity.AddDomainEvent(EnterpriseTemplate.Domain.Abstractions.IDomainEvent)">
+            <summary>
+            Adds a domain event to be dispatched after persistence succeeds.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Common.BaseEntity.ClearDomainEvents">
+            <summary>
+            Clears domain events after dispatching.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Enums.Gender">
+            <summary>
+            Represents optional gender metadata.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Enums.PermissionType">
+            <summary>
+            Represents permission categories for authorization policies.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Enums.Status">
+            <summary>
+            Represents the lifecycle status of a domain record.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Enums.UserType">
+            <summary>
+            Represents supported user source types.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Events.UserActivatedEvent">
+            <summary>
+            Event raised when a user is activated.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Events.UserActivatedEvent.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Events.UserActivatedEvent"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Events.UserActivatedEvent.UserId">
+            <summary>
+            Gets the user identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Events.UserActivatedEvent.OccurredOnUtc">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Events.UserCreatedEvent">
+            <summary>
+            Event raised when a user is created.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Events.UserCreatedEvent.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Events.UserCreatedEvent"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Events.UserCreatedEvent.UserId">
+            <summary>
+            Gets the user identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Events.UserCreatedEvent.OccurredOnUtc">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Events.UserDeactivatedEvent">
+            <summary>
+            Event raised when a user is deactivated.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Events.UserDeactivatedEvent.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Events.UserDeactivatedEvent"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Events.UserDeactivatedEvent.UserId">
+            <summary>
+            Gets the user identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Events.UserDeactivatedEvent.OccurredOnUtc">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Users.ApplicationUser">
+            <summary>
+            User aggregate root that encapsulates identity profile business rules.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.Email">
+            <summary>
+            Gets the email value object.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.MobileNumber">
+            <summary>
+            Gets the mobile number value object.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.FullName">
+            <summary>
+            Gets the full name value object.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.UserType">
+            <summary>
+            Gets the user type.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.Status">
+            <summary>
+            Gets the user status.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.UserRoles">
+            <summary>
+            Gets user role assignments.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Users.ApplicationUser.Create(EnterpriseTemplate.Domain.ValueObjects.Email,EnterpriseTemplate.Domain.ValueObjects.FullName,EnterpriseTemplate.Domain.Enums.UserType)">
+            <summary>
+            Creates a new user aggregate.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Users.ApplicationUser.UpdateProfile(EnterpriseTemplate.Domain.ValueObjects.FullName,EnterpriseTemplate.Domain.ValueObjects.MobileNumber)">
+            <summary>
+            Updates user profile information.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Users.ApplicationUser.Activate">
+            <summary>
+            Activates the user when not already active.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.Users.ApplicationUser.Deactivate">
+            <summary>
+            Deactivates the user when active.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.Users.UserRole">
+            <summary>
+            Join entity connecting users and roles.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.UserId">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.RoleId">
+            <summary>
+            Gets or sets the role identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.User">
+            <summary>
+            Gets or sets the user.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.Role">
+            <summary>
+            Gets or sets the role.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.ValueObjects.Email">
+            <summary>
+            Immutable email value object with domain validation.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.ValueObjects.Email.Value">
+            <summary>
+            Gets the normalized email value.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.Email.Create(System.String)">
+            <summary>
+            Creates a valid email value object.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.Email.Equals(EnterpriseTemplate.Domain.ValueObjects.Email)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.Email.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.Email.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.Email.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.ValueObjects.FullName">
+            <summary>
+            Immutable full-name value object.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.ValueObjects.FullName.FirstName">
+            <summary>
+            Gets the first name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.ValueObjects.FullName.LastName">
+            <summary>
+            Gets the last name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.ValueObjects.FullName.DisplayName">
+            <summary>
+            Gets the display name.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.FullName.Create(System.String,System.String)">
+            <summary>
+            Creates a valid full name value object.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.FullName.Equals(EnterpriseTemplate.Domain.ValueObjects.FullName)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.FullName.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.FullName.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Domain.ValueObjects.MobileNumber">
+            <summary>
+            Immutable mobile number value object stored in normalized international form when provided.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Domain.ValueObjects.MobileNumber.Value">
+            <summary>
+            Gets the normalized mobile number.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.MobileNumber.Create(System.String)">
+            <summary>
+            Creates a mobile number value object.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.MobileNumber.Equals(EnterpriseTemplate.Domain.ValueObjects.MobileNumber)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.MobileNumber.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.MobileNumber.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Domain.ValueObjects.MobileNumber.ToString">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
