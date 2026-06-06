@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnterpriseTemplate.Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:EnterpriseTemplate.Presentation.Areas.Admin.Controllers.DashboardController">
+            <summary>
+            Dashboard controller for the Admin area.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Areas.Admin.Controllers.DashboardController.Index">
+            <summary>
+            Renders the area dashboard.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Areas.Identity.Controllers.DashboardController">
+            <summary>
+            Dashboard controller for the Identity area.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Areas.Identity.Controllers.DashboardController.Index">
+            <summary>
+            Renders the area dashboard.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Areas.Management.Controllers.DashboardController">
+            <summary>
+            Dashboard controller for the Management area.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Areas.Management.Controllers.DashboardController.Index">
+            <summary>
+            Renders the area dashboard.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Areas.Reports.Controllers.DashboardController">
+            <summary>
+            Dashboard controller for the Reports area.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Areas.Reports.Controllers.DashboardController.Index">
+            <summary>
+            Renders the area dashboard.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Areas.Settings.Controllers.DashboardController">
+            <summary>
+            Dashboard controller for the Settings area.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Areas.Settings.Controllers.DashboardController.Index">
+            <summary>
+            Renders the area dashboard.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authentication.ActiveDirectoryAuthenticationProvider">
+            <summary>
+            Authentication provider placeholder for LDAP/Active Directory validation.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.ActiveDirectoryAuthenticationProvider.#ctor(Microsoft.Extensions.Options.IOptions{EnterpriseTemplate.Shared.Options.ActiveDirectoryOptions})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Authentication.ActiveDirectoryAuthenticationProvider"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.Authentication.ActiveDirectoryAuthenticationProvider.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.ActiveDirectoryAuthenticationProvider.AuthenticateAsync(EnterpriseTemplate.Application.DTOs.LoginDto,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authentication.ConfiguredAuthenticationService">
+            <summary>
+            Application authentication service that delegates to the configured provider.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.ConfiguredAuthenticationService.#ctor(System.Collections.Generic.IEnumerable{EnterpriseTemplate.Presentation.Authentication.IAuthenticationProvider},Microsoft.Extensions.Options.IOptions{EnterpriseTemplate.Shared.Options.AuthenticationProviderOptions},Microsoft.AspNetCore.Identity.SignInManager{EnterpriseTemplate.Persistence.Identity.IdentityApplicationUser})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Authentication.ConfiguredAuthenticationService"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.ConfiguredAuthenticationService.LoginAsync(EnterpriseTemplate.Application.DTOs.LoginDto,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.ConfiguredAuthenticationService.LogoutAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authentication.EntraAuthenticationProvider">
+            <summary>
+            Authentication provider marker for Azure Entra ID interactive flows.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.Authentication.EntraAuthenticationProvider.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.EntraAuthenticationProvider.AuthenticateAsync(EnterpriseTemplate.Application.DTOs.LoginDto,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authentication.IAuthenticationProvider">
+            <summary>
+            Abstraction for hybrid authentication providers.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.Authentication.IAuthenticationProvider.Name">
+            <summary>
+            Gets the provider name used by configuration.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.IAuthenticationProvider.AuthenticateAsync(EnterpriseTemplate.Application.DTOs.LoginDto,System.Threading.CancellationToken)">
+            <summary>
+            Authenticates a login request.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authentication.IdentityAuthenticationProvider">
+            <summary>
+            Authentication provider backed by ASP.NET Core Identity.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.IdentityAuthenticationProvider.#ctor(Microsoft.AspNetCore.Identity.SignInManager{EnterpriseTemplate.Persistence.Identity.IdentityApplicationUser})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Authentication.IdentityAuthenticationProvider"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.Authentication.IdentityAuthenticationProvider.Name">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authentication.IdentityAuthenticationProvider.AuthenticateAsync(EnterpriseTemplate.Application.DTOs.LoginDto,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authorization.DynamicAuthorizationPolicyProvider">
+            <summary>
+            Dynamically creates authorization policies from permission policy names.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authorization.DynamicAuthorizationPolicyProvider.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Authorization.AuthorizationOptions})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Authorization.DynamicAuthorizationPolicyProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authorization.DynamicAuthorizationPolicyProvider.GetPolicyAsync(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authorization.PermissionHandler">
+            <summary>
+            Authorization handler that resolves permission grants through the application service.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authorization.PermissionHandler.#ctor(EnterpriseTemplate.Application.Services.IPermissionService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Authorization.PermissionHandler"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authorization.PermissionHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,EnterpriseTemplate.Presentation.Authorization.PermissionRequirement)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Authorization.PermissionRequirement">
+            <summary>
+            Authorization requirement for a dynamic permission code.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Authorization.PermissionRequirement.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Authorization.PermissionRequirement"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.Authorization.PermissionRequirement.PermissionCode">
+            <summary>
+            Gets the permission code.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Controllers.AccountController">
+            <summary>
+            Handles interactive account authentication routes used by the application cookie.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.AccountController.#ctor(EnterpriseTemplate.Application.Services.IAuthenticationService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Controllers.AccountController"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.AccountController.Login(System.String)">
+            <summary>
+            Shows the login form.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.AccountController.Login(EnterpriseTemplate.Presentation.ViewModels.LoginViewModel,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Attempts to sign in with the configured authentication provider.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.AccountController.Logout(System.Threading.CancellationToken)">
+            <summary>
+            Signs the current user out.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.AccountController.AccessDenied">
+            <summary>
+            Shows an access denied page for authenticated users without permission.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Controllers.BaseController">
+            <summary>
+            Base MVC controller with shared helpers for presentation concerns.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Controllers.DashboardController">
+            <summary>
+            Controller responsible for the application dashboard.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.DashboardController.Index">
+            <summary>
+            Renders the dashboard index page.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Controllers.PermissionController">
+            <summary>
+            Thin MVC controller for permission management.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.PermissionController.Index">
+            <summary>
+            Lists permissions.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Controllers.RoleController">
+            <summary>
+            Thin MVC controller for role management.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.RoleController.Index">
+            <summary>
+            Lists roles.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Controllers.UserController">
+            <summary>
+            Thin MVC controller for user management.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.UserController.#ctor(EnterpriseTemplate.Application.Services.IUserService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Controllers.UserController"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.UserController.Index(System.Threading.CancellationToken)">
+            <summary>
+            Lists users.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.UserController.Create">
+            <summary>
+            Displays the create form.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Controllers.UserController.Create(EnterpriseTemplate.Presentation.ViewModels.CreateUserViewModel,System.Threading.CancellationToken)">
+            <summary>
+            Creates a user.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.CurrentUserService">
+            <summary>
+            HTTP implementation of current user context.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.CurrentUserService.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.CurrentUserService"/> class.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.CurrentUserService.UserId">
+            <inheritdoc />
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.CurrentUserService.UserName">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Filters.AuditActionFilter">
+            <summary>
+            Captures action audit metadata for future audit sinks.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Filters.AuditActionFilter.#ctor(Microsoft.Extensions.Logging.ILogger{EnterpriseTemplate.Presentation.Filters.AuditActionFilter})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Filters.AuditActionFilter"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Filters.AuditActionFilter.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Filters.GlobalExceptionFilter">
+            <summary>
+            MVC exception filter kept for view-specific extension points; API errors are handled by middleware.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Filters.GlobalExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Filters.ValidationFilter">
+            <summary>
+            Returns validation problem details when model binding errors exist.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Filters.ValidationFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Filters.ValidationFilter.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Middleware.CorrelationIdMiddleware">
+            <summary>
+            Ensures each request has a correlation identifier for tracing.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Middleware.CorrelationIdMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Middleware.CorrelationIdMiddleware"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Middleware.CorrelationIdMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Processes the HTTP request.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.Middleware.GlobalExceptionMiddleware">
+            <summary>
+            Converts exceptions into RFC 7807 problem details responses.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Middleware.GlobalExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{EnterpriseTemplate.Presentation.Middleware.GlobalExceptionMiddleware})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Presentation.Middleware.GlobalExceptionMiddleware"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Presentation.Middleware.GlobalExceptionMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Processes the HTTP request.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.ViewModels.CreateUserViewModel">
+            <summary>
+            View model used to create a user.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.CreateUserViewModel.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.CreateUserViewModel.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.CreateUserViewModel.Email">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.ViewModels.EditUserViewModel">
+            <summary>
+            View model used to edit a user.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.EditUserViewModel.Id">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.EditUserViewModel.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.EditUserViewModel.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.EditUserViewModel.MobileNumber">
+            <summary>
+            Gets or sets the mobile number.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.ViewModels.LoginViewModel">
+            <summary>
+            View model used for local login.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.LoginViewModel.UserName">
+            <summary>
+            Gets or sets the username.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.LoginViewModel.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.LoginViewModel.RememberMe">
+            <summary>
+            Gets or sets a value indicating whether persistent login is requested.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.LoginViewModel.ReturnUrl">
+            <summary>
+            Gets or sets the local URL to redirect to after successful login.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Presentation.ViewModels.UserViewModel">
+            <summary>
+            View model used to render user details.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.UserViewModel.Id">
+            <summary>
+            Gets or sets the user identifier.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.UserViewModel.Email">
+            <summary>
+            Gets or sets the email address.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Presentation.ViewModels.UserViewModel.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+        </member>
+    </members>
+</doc>

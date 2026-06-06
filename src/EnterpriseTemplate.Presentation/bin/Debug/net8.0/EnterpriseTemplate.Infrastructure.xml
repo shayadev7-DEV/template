@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EnterpriseTemplate.Infrastructure</name>
+    </assembly>
+    <members>
+        <member name="T:EnterpriseTemplate.Infrastructure.BackgroundJobs.QueuedBackgroundService">
+            <summary>
+            Background service placeholder for queued operational jobs.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.BackgroundJobs.QueuedBackgroundService.#ctor(Microsoft.Extensions.Logging.ILogger{EnterpriseTemplate.Infrastructure.BackgroundJobs.QueuedBackgroundService})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Infrastructure.BackgroundJobs.QueuedBackgroundService"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.BackgroundJobs.QueuedBackgroundService.ExecuteAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.Caching.DistributedCacheService">
+            <summary>
+            Distributed cache service for multi-node deployments.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Caching.DistributedCacheService.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Infrastructure.Caching.DistributedCacheService"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Caching.DistributedCacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.TimeSpan,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Caching.DistributedCacheService.RemoveAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.Caching.MemoryCacheService">
+            <summary>
+            In-process cache service suitable for single-node or non-critical cached data.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Caching.MemoryCacheService.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Infrastructure.Caching.MemoryCacheService"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Caching.MemoryCacheService.GetOrCreateAsync``1(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``0}},System.TimeSpan,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Caching.MemoryCacheService.RemoveAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.DependencyInjection">
+            <summary>
+            Registers infrastructure services.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.DependencyInjection.AddInfrastructure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Adds infrastructure dependencies such as logging adapters, cache adapters, and hosted services.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.ExternalServices.IEmailService">
+            <summary>
+            Sends application emails through a provider selected outside the domain model.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.ExternalServices.IEmailService.SendAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an email asynchronously.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.ExternalServices.IFileService">
+            <summary>
+            Stores and retrieves application files.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.ExternalServices.IFileService.SaveAsync(System.IO.Stream,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Saves a stream and returns a storage key.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.ExternalServices.ISmsService">
+            <summary>
+            Sends SMS messages through a replaceable provider.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.ExternalServices.ISmsService.SendAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an SMS message asynchronously.
+            </summary>
+        </member>
+        <member name="T:EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger">
+            <summary>
+            Default adapter from the application logging abstraction to Microsoft.Extensions.Logging.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger.#ctor(Microsoft.Extensions.Logging.ILogger{EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger.Information(System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger.Warning(System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Infrastructure.Logging.ApplicationLogger.Error(System.Exception,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
