@@ -43,6 +43,9 @@ public static class DependencyInjection
 
         services.ConfigureApplicationCookie(options =>
         {
+            options.LoginPath = "/Account/Login";
+            options.LogoutPath = "/Account/Logout";
+            options.AccessDeniedPath = "/Account/AccessDenied";
             options.Cookie.HttpOnly = true;
             options.Cookie.SecurePolicy = Microsoft.AspNetCore.Http.CookieSecurePolicy.Always;
             options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict;
