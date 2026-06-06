@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="..\EnterpriseTemplate.Application\EnterpriseTemplate.Application.csproj" />
+    <ProjectReference Include="..\EnterpriseTemplate.Infrastructure\EnterpriseTemplate.Infrastructure.csproj" />
+    <ProjectReference Include="..\EnterpriseTemplate.Persistence\EnterpriseTemplate.Persistence.csproj" />
+    <ProjectReference Include="..\EnterpriseTemplate.Shared\EnterpriseTemplate.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.19.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+</Project>

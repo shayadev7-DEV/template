@@ -1,0 +1,21 @@
+@model IReadOnlyList<UserListDto>
+
+<h1>Users</h1>
+<a class="btn btn-primary mb-3" asp-action="Create">Create User</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@user.DisplayName</td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+using EnterpriseTemplate.Domain.Enums;
+
+namespace EnterpriseTemplate.Application.DTOs;
+
+/// <summary>
+/// Data transfer object returned for user details.
+/// </summary>
+public sealed class UserDto
+{
+    /// <summary>
+    /// Gets or sets the user identifier.
+    /// </summary>
+    public Guid Id { get; set; }
+
+    /// <summary>
+    /// Gets or sets the email address.
+    /// </summary>
+    public string Email { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets or sets the display name.
+    /// </summary>
+    public string DisplayName { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Gets or sets the mobile number.
+    /// </summary>
+    public string? MobileNumber { get; set; }
+
+    /// <summary>
+    /// Gets or sets the status.
+    /// </summary>
+    public Status Status { get; set; }
+}
