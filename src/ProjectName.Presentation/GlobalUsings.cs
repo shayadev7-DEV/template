@@ -1,0 +1,12 @@
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using ProjectName.Application;
+global using ProjectName.Application.Abstractions.Services;
+global using ProjectName.Application.Common.Exceptions;
+global using ProjectName.Application.DTOs;
+global using ProjectName.Domain.Enums;
+global using ProjectName.Infrastructure;
+global using ProjectName.Persistence;
+global using ProjectName.Presentation.ViewModels;
+global using ProjectName.Shared.Constants;
+global using ProjectName.Shared.Options;

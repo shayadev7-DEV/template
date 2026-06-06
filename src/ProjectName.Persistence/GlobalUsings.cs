@@ -1,0 +1,13 @@
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using ProjectName.Application.Abstractions.Persistence;
+global using ProjectName.Domain.Common;
+global using ProjectName.Domain.Entities;
+global using ProjectName.Domain.Enums;
+global using ProjectName.Domain.ValueObjects;
+global using ProjectName.Shared.Constants;
+global using ProjectName.Shared.Options;

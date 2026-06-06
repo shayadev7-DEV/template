@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup><ProjectReference Include="..\..\src\ProjectName.Domain\ProjectName.Domain.csproj" /></ItemGroup>
+  <ItemGroup><PackageReference Include="xunit" /><PackageReference Include="xunit.runner.visualstudio" /></ItemGroup>
+</Project>

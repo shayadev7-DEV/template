@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup><ProjectReference Include="..\..\src\ProjectName.Domain\ProjectName.Domain.csproj" /><ProjectReference Include="..\..\src\ProjectName.Application\ProjectName.Application.csproj" /></ItemGroup>
+  <ItemGroup><PackageReference Include="NetArchTest.Rules" /><PackageReference Include="xunit" /><PackageReference Include="xunit.runner.visualstudio" /></ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Caching.Distributed;
+global using Microsoft.Extensions.Caching.Memory;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Options;
+global using ProjectName.Application.Abstractions.Authentication;
+global using ProjectName.Application.Abstractions.Authorization;
+global using ProjectName.Application.Abstractions.Caching;
+global using ProjectName.Application.Abstractions.Logging;
+global using ProjectName.Application.Abstractions.Persistence;
+global using ProjectName.Application.DTOs;
+global using ProjectName.Domain.Abstractions;
+global using ProjectName.Shared.Options;

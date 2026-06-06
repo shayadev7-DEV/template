@@ -1,0 +1,9 @@
+@model IReadOnlyCollection<ProjectName.Application.DTOs.UserListDto>
+@{
+    ViewData["Title"] = "Users";
+}
+<h1>Users</h1>
+<a class="btn btn-primary" asp-action="Create">Create user</a>
+<table class="table table-striped mt-3"><thead><tr><th>Name</th><th>Email</th><th>Status</th></tr></thead><tbody>
+@foreach (var user in Model) { <tr><td>@user.FullName</td><td>@user.Email</td><td>@user.Status</td></tr> }
+</tbody></table>
