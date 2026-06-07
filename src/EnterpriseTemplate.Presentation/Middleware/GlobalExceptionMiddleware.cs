@@ -1,5 +1,8 @@
 using EnterpriseTemplate.Application.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+using Serilog.Context;
 
 namespace EnterpriseTemplate.Presentation.Middleware;
 
@@ -31,9 +34,38 @@ public sealed class GlobalExceptionMiddleware
         }
         catch (Exception exception)
         {
-            _logger.LogError(exception, "Unhandled exception occurred.");
+            if (IsDatabaseException(exception))
+            {
+                using (LogContext.PushProperty("DatabaseError", true))
+                using (LogContext.PushProperty("CorrelationId", context.Items["X-Correlation-Id"] ?? context.TraceIdentifier))
+                {
+                    _logger.LogError(exception, "Database exception occurred while processing {Method} {Path}.", context.Request.Method, context.Request.Path);
+                }
+            }
+            else
+            {
+                _logger.LogError(exception, "Unhandled exception occurred while processing {Method} {Path}.", context.Request.Method, context.Request.Path);
+            }
+
             await WriteProblemDetailsAsync(context, exception).ConfigureAwait(false);
         }
+    }
+
+    private static bool IsDatabaseException(Exception exception)
+    {
+        Exception? currentException = exception;
+
+        while (currentException is not null)
+        {
+            if (currentException is DbUpdateException or DbUpdateConcurrencyException or SqlException or TimeoutException)
+            {
+                return true;
+            }
+
+            currentException = currentException.InnerException;
+        }
+
+        return false;
     }
 
     private static async Task WriteProblemDetailsAsync(HttpContext context, Exception exception)

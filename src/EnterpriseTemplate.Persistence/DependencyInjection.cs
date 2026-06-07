@@ -1,6 +1,7 @@
 using EnterpriseTemplate.Application.Abstractions;
 using EnterpriseTemplate.Persistence.Authorization;
 using EnterpriseTemplate.Persistence.Identity;
+using EnterpriseTemplate.Persistence.Interceptors;
 using EnterpriseTemplate.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +20,14 @@ public static class DependencyInjection
     /// </summary>
     public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>
+        services.AddSingleton<DatabaseExceptionLoggingInterceptor>();
+        services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =>
         {
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), sqlOptions =>
             {
                 sqlOptions.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName);
             });
+            options.AddInterceptors(serviceProvider.GetRequiredService<DatabaseExceptionLoggingInterceptor>());
         });
 
         services.AddIdentity<IdentityApplicationUser, IdentityRole<Guid>>(options =>
