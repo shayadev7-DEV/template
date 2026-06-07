@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\EnterpriseTemplate.Presentation.props" />
-</Project>
