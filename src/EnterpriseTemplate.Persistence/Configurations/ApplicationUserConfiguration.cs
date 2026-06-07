@@ -37,7 +37,6 @@ public sealed class ApplicationUserConfiguration : IEntityTypeConfiguration<Appl
             mobile.Property(item => item.Value).HasColumnName("MobileNumber").HasMaxLength(MobileMaxLength);
         });
 
-        builder.Navigation(user => user.UserRoles).UsePropertyAccessMode(PropertyAccessMode.Field);
         builder.Ignore(user => user.DomainEvents);
     }
 }

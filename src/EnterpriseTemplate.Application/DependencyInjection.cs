@@ -21,7 +21,6 @@ public static class DependencyInjection
         services.AddValidatorsFromAssembly(assembly);
         services.AddMediatR(configuration => configuration.RegisterServicesFromAssembly(assembly));
         services.AddScoped<Services.IUserService, Services.UserService>();
-        services.AddScoped<Services.IPermissionService, Services.PermissionService>();
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(Common.Behaviors.ValidationBehavior<,>));
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(Common.Behaviors.LoggingBehavior<,>));
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(Common.Behaviors.TransactionBehavior<,>));

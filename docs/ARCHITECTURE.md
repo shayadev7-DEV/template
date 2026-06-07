@@ -65,13 +65,13 @@ Authentication is hybrid and uses a provider pattern: `IAuthenticationProvider`,
 
 ## 5. Authorization Architecture
 
-Authorization combines role-based, policy-based, and permission-based approaches. Dynamic policies use the `Permission:` prefix and are resolved by `DynamicAuthorizationPolicyProvider`; `PermissionHandler` delegates permission checks to `IPermissionService`.
+Authorization is permission-based. ASP.NET Core Identity roles are retained only as authentication-layer permission containers through `AspNetRoles` and `AspNetUserRoles`; duplicate domain roles and domain user-role membership are intentionally avoided. Dynamic policies use permission codes such as `users.create` and are resolved by `DynamicAuthorizationPolicyProvider`; `PermissionHandler` delegates checks to `IPermissionService`, which resolves `AspNetUserRoles` -> `Domain.RolePermissions` -> `Domain.Permissions`.
 
-**Reason for selection:** role checks are simple for coarse-grained access, while permissions provide fine-grained enterprise governance.
+**Reason for selection:** Identity remains responsible for authentication and role membership, while domain permissions provide fine-grained enterprise governance without polluting the domain with ASP.NET Core framework types.
 
-**Advantages:** dynamic policies avoid hardcoding every policy, permissions can be seeded and changed in the database, and controllers remain declarative.
+**Advantages:** one user-role membership source, no duplicate role management, dynamic permission policies avoid hardcoding every policy, permissions can be seeded and changed in the database, and controllers remain declarative.
 
-**Disadvantages:** permission lookup needs caching and invalidation in high-scale environments.
+**Disadvantages:** permission lookup needs caching and invalidation in high-scale environments, and role administration must treat Identity roles as permission containers rather than business aggregates.
 
 ## 6. Domain Design
 

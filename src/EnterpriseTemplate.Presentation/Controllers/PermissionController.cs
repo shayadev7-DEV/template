@@ -1,3 +1,4 @@
+using EnterpriseTemplate.Shared.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,7 +7,7 @@ namespace EnterpriseTemplate.Presentation.Controllers;
 /// <summary>
 /// Thin MVC controller for permission management.
 /// </summary>
-[Authorize(Roles = "Administrator")]
+[Authorize(Policy = PolicyNames.PermissionsManage)]
 public sealed class PermissionController : BaseController
 {
     /// <summary>

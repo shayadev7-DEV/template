@@ -24,7 +24,7 @@ public sealed class PermissionHandler : AuthorizationHandler<PermissionRequireme
     {
         string? userIdValue = context.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-        if (Guid.TryParse(userIdValue, out Guid userId) && await _permissionService.UserHasPermissionAsync(userId, requirement.PermissionCode, CancellationToken.None).ConfigureAwait(false))
+        if (Guid.TryParse(userIdValue, out Guid userId) && await _permissionService.HasPermissionAsync(userId, requirement.PermissionCode, CancellationToken.None).ConfigureAwait(false))
         {
             context.Succeed(requirement);
         }

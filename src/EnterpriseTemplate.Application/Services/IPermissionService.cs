@@ -1,12 +1,12 @@
 namespace EnterpriseTemplate.Application.Services;
 
 /// <summary>
-/// Service responsible for permission lookup and assignment.
+/// Application-layer contract for resolving permission grants for authenticated users.
 /// </summary>
 public interface IPermissionService
 {
     /// <summary>
-    /// Determines whether a user has the requested permission.
+    /// Determines whether the authenticated Identity user has the requested permission code through role membership.
     /// </summary>
-    Task<bool> UserHasPermissionAsync(Guid userId, string permissionCode, CancellationToken cancellationToken);
+    Task<bool> HasPermissionAsync(Guid userId, string permissionCode, CancellationToken cancellationToken);
 }
