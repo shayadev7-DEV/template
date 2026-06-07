@@ -368,4 +368,14 @@ FodyWeavers.xsd
 /bin/
 /obj/
 
+.vs/
+**/bin/
+**/obj/
+
+*.user
+*.suo
+*.cache
+*.pdb
+
+apphost.exe
 
