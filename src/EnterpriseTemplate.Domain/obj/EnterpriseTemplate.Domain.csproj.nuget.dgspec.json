@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj": {}
+    "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj": {
+    "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj",
         "projectName": "EnterpriseTemplate.Domain",
-        "projectPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj",
+        "projectPath": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj",
         "packagesPath": "C:\\Users\\younes.m\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\obj\\",
         "projectStyle": "PackageReference",

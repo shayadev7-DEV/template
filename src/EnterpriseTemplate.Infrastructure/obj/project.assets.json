@@ -3287,9 +3287,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Infrastructure\\EnterpriseTemplate.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Infrastructure\\EnterpriseTemplate.Infrastructure.csproj",
       "projectName": "EnterpriseTemplate.Infrastructure",
-      "projectPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Infrastructure\\EnterpriseTemplate.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Infrastructure\\EnterpriseTemplate.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\younes.m\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
@@ -3315,11 +3315,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Application\\EnterpriseTemplate.Application.csproj": {
-              "projectPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Application\\EnterpriseTemplate.Application.csproj"
+            "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Application\\EnterpriseTemplate.Application.csproj": {
+              "projectPath": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Application\\EnterpriseTemplate.Application.csproj"
             },
-            "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj": {
-              "projectPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj"
+            "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj": {
+              "projectPath": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj"
             }
           }
         }
