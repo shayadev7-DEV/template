@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 namespace EnterpriseTemplate.Presentation.Authorization;
 
 /// <summary>
-/// Dynamically creates authorization policies from permission policy names.
+/// Dynamically creates authorization policies from permission code policy names.
 /// </summary>
 public sealed class DynamicAuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
 {
@@ -26,15 +26,32 @@ public sealed class DynamicAuthorizationPolicyProvider : DefaultAuthorizationPol
             return policy;
         }
 
-        string prefix = $"{PolicyNames.PermissionPrefix}:";
+        string permissionCode = GetPermissionCode(policyName);
 
-        if (policyName.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+        if (IsPermissionCode(permissionCode))
         {
-            string permission = policyName[prefix.Length..];
-
-            return new AuthorizationPolicyBuilder().RequireAuthenticatedUser().AddRequirements(new PermissionRequirement(permission)).Build();
+            return new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .AddRequirements(new PermissionRequirement(permissionCode))
+                .Build();
         }
 
         return null;
+    }
+
+    private static string GetPermissionCode(string policyName)
+    {
+        string prefix = $"{PolicyNames.PermissionPrefix}:";
+
+        return policyName.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)
+            ? policyName[prefix.Length..]
+            : policyName;
+    }
+
+    private static bool IsPermissionCode(string policyName)
+    {
+        return !string.IsNullOrWhiteSpace(policyName)
+            && policyName.Contains('.', StringComparison.Ordinal)
+            && policyName.All(character => char.IsLetterOrDigit(character) || character is '.' or '_' or '-');
     }
 }

@@ -1,4 +1,5 @@
 using EnterpriseTemplate.Application.Abstractions;
+using EnterpriseTemplate.Persistence.Authorization;
 using EnterpriseTemplate.Persistence.Identity;
 using EnterpriseTemplate.Persistence.Repositories;
 using Microsoft.AspNetCore.Identity;
@@ -53,6 +54,7 @@ public static class DependencyInjection
             options.ExpireTimeSpan = TimeSpan.FromHours(8);
         });
 
+        services.AddScoped<EnterpriseTemplate.Application.Services.IPermissionService, PermissionService>();
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 

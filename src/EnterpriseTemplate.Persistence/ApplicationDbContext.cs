@@ -30,14 +30,14 @@ public sealed class ApplicationDbContext : IdentityDbContext<IdentityApplication
     public DbSet<ApplicationUser> DomainUsers => Set<ApplicationUser>();
 
     /// <summary>
-    /// Gets roles.
-    /// </summary>
-    public DbSet<Role> DomainRoles => Set<Role>();
-
-    /// <summary>
     /// Gets permissions.
     /// </summary>
     public DbSet<Permission> Permissions => Set<Permission>();
+
+    /// <summary>
+    /// Gets permission grants assigned to ASP.NET Core Identity roles.
+    /// </summary>
+    public DbSet<RolePermission> RolePermissions => Set<RolePermission>();
 
     /// <inheritdoc />
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

@@ -1,16 +1,17 @@
+using EnterpriseTemplate.Shared.Constants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EnterpriseTemplate.Presentation.Controllers;
 
 /// <summary>
-/// Thin MVC controller for role management.
+/// Thin MVC controller for Identity role containers.
 /// </summary>
-[Authorize(Roles = "Administrator")]
+[Authorize(Policy = PolicyNames.PermissionsManage)]
 public sealed class RoleController : BaseController
 {
     /// <summary>
-    /// Lists roles.
+    /// Lists Identity roles that act as permission containers.
     /// </summary>
     public IActionResult Index()
     {
