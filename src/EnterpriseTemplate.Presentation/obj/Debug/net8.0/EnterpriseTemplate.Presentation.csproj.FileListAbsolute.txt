@@ -131,3 +131,14 @@ C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\
 C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.pdb
 C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\EnterpriseTemplate.Presentation.genruntimeconfig.cache
 C:\Users\younes.m\Source\Repos\template\src\EnterpriseTemplate.Presentation\obj\Debug\net8.0\ref\EnterpriseTemplate.Presentation.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\EnterpriseTemplate.Presentation.staticwebassets.runtime.json
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\younes.m\source\repos\template\src\EnterpriseTemplate.Presentation\bin\Debug\net8.0\Serilog.Sinks.File.dll

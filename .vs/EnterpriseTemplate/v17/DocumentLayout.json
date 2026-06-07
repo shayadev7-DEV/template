@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\younes.m\\source\\repos\\template\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\enterprisetemplate.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\enterprisetemplate.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|c:\\users\\younes.m\\source\\repos\\template\\src\\enterprisetemplate.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{66666666-6666-6666-6666-666666666666}|src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj|solutionrelative:src\\enterprisetemplate.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,42 +41,72 @@
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\appsettings.json",
-              "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\appsettings.json",
-              "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAADKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-07T07:39:28.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnterpriseTemplate.Presentation",
-              "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj",
-              "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj",
-              "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj",
-              "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\EnterpriseTemplate.Presentation.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-07T07:39:27.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\Controllers\\AccountController.cs",
               "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAApwC0AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T07:34:08.589Z",
+              "WhenOpened": "2026-06-07T08:57:16.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\CurrentUserService.cs",
+              "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\CurrentUserService.cs",
+              "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\CurrentUserService.cs",
+              "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\CurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:52:58.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\Program.cs",
+              "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:52:57.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GlobalExceptionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\Middleware\\GlobalExceptionMiddleware.cs",
+              "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\Middleware\\GlobalExceptionMiddleware.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T08:51:52.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\EnterpriseTemplate.Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Presentation\\appsettings.json",
+              "RelativeToolTip": "src\\EnterpriseTemplate.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-07T08:21:28.457Z",
               "EditorCaption": ""
             }
           ]

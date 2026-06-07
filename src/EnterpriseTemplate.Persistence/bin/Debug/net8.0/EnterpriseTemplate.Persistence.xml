@@ -92,6 +92,22 @@
             Gets or sets the linked domain user identifier.
             </summary>
         </member>
+        <member name="T:EnterpriseTemplate.Persistence.Interceptors.DatabaseExceptionLoggingInterceptor">
+            <summary>
+            Logs failed Entity Framework database commands so database-side errors are captured in a dedicated log file.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Persistence.Interceptors.DatabaseExceptionLoggingInterceptor.#ctor(Microsoft.Extensions.Logging.ILogger{EnterpriseTemplate.Persistence.Interceptors.DatabaseExceptionLoggingInterceptor})">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Persistence.Interceptors.DatabaseExceptionLoggingInterceptor"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Persistence.Interceptors.DatabaseExceptionLoggingInterceptor.CommandFailed(System.Data.Common.DbCommand,Microsoft.EntityFrameworkCore.Diagnostics.CommandErrorEventData)">
+            <inheritdoc />
+        </member>
+        <member name="M:EnterpriseTemplate.Persistence.Interceptors.DatabaseExceptionLoggingInterceptor.CommandFailedAsync(System.Data.Common.DbCommand,Microsoft.EntityFrameworkCore.Diagnostics.CommandErrorEventData,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
         <member name="T:EnterpriseTemplate.Persistence.Repositories.GenericRepository`1">
             <summary>
             EF Core implementation of the generic repository pattern.
