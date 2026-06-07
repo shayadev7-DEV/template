@@ -28,7 +28,7 @@ public sealed class UserController : BaseController
     /// <summary>
     /// Lists users.
     /// </summary>
-    [Authorize(Policy = PolicyNames.PermissionPrefix + ":Users.Read")]
+    [Authorize(Policy = PolicyNames.UsersRead)]
     public async Task<IActionResult> Index(CancellationToken cancellationToken)
     {
         var users = await _userService.GetPagedAsync(DefaultPageNumber, DefaultPageSize, cancellationToken).ConfigureAwait(false);
@@ -39,7 +39,7 @@ public sealed class UserController : BaseController
     /// <summary>
     /// Displays the create form.
     /// </summary>
-    [Authorize(Policy = PolicyNames.PermissionPrefix + ":Users.Create")]
+    [Authorize(Policy = PolicyNames.UsersCreate)]
     public IActionResult Create()
     {
         return View(new CreateUserViewModel());
@@ -50,7 +50,7 @@ public sealed class UserController : BaseController
     /// </summary>
     [HttpPost]
     [ValidateAntiForgeryToken]
-    [Authorize(Policy = PolicyNames.PermissionPrefix + ":Users.Create")]
+    [Authorize(Policy = PolicyNames.UsersCreate)]
     public async Task<IActionResult> Create(CreateUserViewModel model, CancellationToken cancellationToken)
     {
         CreateUserDto dto = new()

@@ -3,12 +3,12 @@ using EnterpriseTemplate.Domain.Common;
 namespace EnterpriseTemplate.Domain.Authorization;
 
 /// <summary>
-/// Join entity connecting roles and permissions.
+/// Permission assignment for an authentication role.
 /// </summary>
 public sealed class RolePermission : AuditableEntity
 {
     /// <summary>
-    /// Gets or sets the role identifier.
+    /// Gets or sets the ASP.NET Core Identity role identifier.
     /// </summary>
     public Guid RoleId { get; set; }
 
@@ -18,12 +18,7 @@ public sealed class RolePermission : AuditableEntity
     public Guid PermissionId { get; set; }
 
     /// <summary>
-    /// Gets or sets the role.
-    /// </summary>
-    public Role? Role { get; set; }
-
-    /// <summary>
-    /// Gets or sets the permission.
+    /// Gets or sets the permission granted to the Identity role.
     /// </summary>
     public Permission? Permission { get; set; }
 }

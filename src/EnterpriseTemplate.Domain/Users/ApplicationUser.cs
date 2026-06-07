@@ -10,8 +10,6 @@ namespace EnterpriseTemplate.Domain.Users;
 /// </summary>
 public sealed class ApplicationUser : AggregateRoot
 {
-    private readonly List<UserRole> _userRoles = new();
-
     private ApplicationUser()
     {
         Email = Email.Create("placeholder@example.com");
@@ -51,11 +49,6 @@ public sealed class ApplicationUser : AggregateRoot
     /// Gets the user status.
     /// </summary>
     public Status Status { get; private set; }
-
-    /// <summary>
-    /// Gets user role assignments.
-    /// </summary>
-    public IReadOnlyCollection<UserRole> UserRoles => _userRoles.AsReadOnly();
 
     /// <summary>
     /// Creates a new user aggregate.
