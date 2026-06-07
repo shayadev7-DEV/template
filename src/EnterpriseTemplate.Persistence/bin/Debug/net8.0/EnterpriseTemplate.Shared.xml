@@ -11,7 +11,32 @@
         </member>
         <member name="F:EnterpriseTemplate.Shared.Constants.PolicyNames.PermissionPrefix">
             <summary>
-            Prefix used by dynamic permission policies.
+            Legacy prefix accepted by the dynamic policy provider for backward compatibility.
+            </summary>
+        </member>
+        <member name="F:EnterpriseTemplate.Shared.Constants.PolicyNames.UsersRead">
+            <summary>
+            Permission required to view users.
+            </summary>
+        </member>
+        <member name="F:EnterpriseTemplate.Shared.Constants.PolicyNames.UsersCreate">
+            <summary>
+            Permission required to create users.
+            </summary>
+        </member>
+        <member name="F:EnterpriseTemplate.Shared.Constants.PolicyNames.UsersUpdate">
+            <summary>
+            Permission required to update users.
+            </summary>
+        </member>
+        <member name="F:EnterpriseTemplate.Shared.Constants.PolicyNames.UsersDelete">
+            <summary>
+            Permission required to delete users.
+            </summary>
+        </member>
+        <member name="F:EnterpriseTemplate.Shared.Constants.PolicyNames.PermissionsManage">
+            <summary>
+            Permission required to manage permission assignments.
             </summary>
         </member>
         <member name="T:EnterpriseTemplate.Shared.Options.ActiveDirectoryOptions">

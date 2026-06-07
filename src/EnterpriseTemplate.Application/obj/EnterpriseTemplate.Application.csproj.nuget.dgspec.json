@@ -100,7 +100,7 @@
         "projectName": "EnterpriseTemplate.Domain",
         "projectPath": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\EnterpriseTemplate.Domain.csproj",
         "packagesPath": "C:\\Users\\younes.m\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\younes.m\\Source\\Repos\\template\\src\\EnterpriseTemplate.Domain\\obj\\",
+        "outputPath": "C:\\Users\\younes.m\\source\\repos\\template\\src\\EnterpriseTemplate.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

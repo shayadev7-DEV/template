@@ -130,7 +130,7 @@
         </member>
         <member name="T:EnterpriseTemplate.Presentation.Authorization.DynamicAuthorizationPolicyProvider">
             <summary>
-            Dynamically creates authorization policies from permission policy names.
+            Dynamically creates authorization policies from permission code policy names.
             </summary>
         </member>
         <member name="M:EnterpriseTemplate.Presentation.Authorization.DynamicAuthorizationPolicyProvider.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Authorization.AuthorizationOptions})">
@@ -226,12 +226,12 @@
         </member>
         <member name="T:EnterpriseTemplate.Presentation.Controllers.RoleController">
             <summary>
-            Thin MVC controller for role management.
+            Thin MVC controller for Identity role containers.
             </summary>
         </member>
         <member name="M:EnterpriseTemplate.Presentation.Controllers.RoleController.Index">
             <summary>
-            Lists roles.
+            Lists Identity roles that act as permission containers.
             </summary>
         </member>
         <member name="T:EnterpriseTemplate.Presentation.Controllers.UserController">

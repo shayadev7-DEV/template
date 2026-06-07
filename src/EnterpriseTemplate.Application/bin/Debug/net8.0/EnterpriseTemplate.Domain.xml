@@ -54,34 +54,14 @@
             Gets the permission type.
             </summary>
         </member>
-        <member name="T:EnterpriseTemplate.Domain.Authorization.Role">
-            <summary>
-            Domain role aggregate used for permission assignments.
-            </summary>
-        </member>
-        <member name="M:EnterpriseTemplate.Domain.Authorization.Role.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Domain.Authorization.Role"/> class.
-            </summary>
-        </member>
-        <member name="P:EnterpriseTemplate.Domain.Authorization.Role.Name">
-            <summary>
-            Gets the role name.
-            </summary>
-        </member>
-        <member name="P:EnterpriseTemplate.Domain.Authorization.Role.RolePermissions">
-            <summary>
-            Gets role permissions.
-            </summary>
-        </member>
         <member name="T:EnterpriseTemplate.Domain.Authorization.RolePermission">
             <summary>
-            Join entity connecting roles and permissions.
+            Permission assignment for an authentication role.
             </summary>
         </member>
         <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.RoleId">
             <summary>
-            Gets or sets the role identifier.
+            Gets or sets the ASP.NET Core Identity role identifier.
             </summary>
         </member>
         <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.PermissionId">
@@ -89,14 +69,9 @@
             Gets or sets the permission identifier.
             </summary>
         </member>
-        <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.Role">
-            <summary>
-            Gets or sets the role.
-            </summary>
-        </member>
         <member name="P:EnterpriseTemplate.Domain.Authorization.RolePermission.Permission">
             <summary>
-            Gets or sets the permission.
+            Gets or sets the permission granted to the Identity role.
             </summary>
         </member>
         <member name="T:EnterpriseTemplate.Domain.Common.AggregateRoot">
@@ -276,11 +251,6 @@
             Gets the user status.
             </summary>
         </member>
-        <member name="P:EnterpriseTemplate.Domain.Users.ApplicationUser.UserRoles">
-            <summary>
-            Gets user role assignments.
-            </summary>
-        </member>
         <member name="M:EnterpriseTemplate.Domain.Users.ApplicationUser.Create(EnterpriseTemplate.Domain.ValueObjects.Email,EnterpriseTemplate.Domain.ValueObjects.FullName,EnterpriseTemplate.Domain.Enums.UserType)">
             <summary>
             Creates a new user aggregate.
@@ -299,31 +269,6 @@
         <member name="M:EnterpriseTemplate.Domain.Users.ApplicationUser.Deactivate">
             <summary>
             Deactivates the user when active.
-            </summary>
-        </member>
-        <member name="T:EnterpriseTemplate.Domain.Users.UserRole">
-            <summary>
-            Join entity connecting users and roles.
-            </summary>
-        </member>
-        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.UserId">
-            <summary>
-            Gets or sets the user identifier.
-            </summary>
-        </member>
-        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.RoleId">
-            <summary>
-            Gets or sets the role identifier.
-            </summary>
-        </member>
-        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.User">
-            <summary>
-            Gets or sets the user.
-            </summary>
-        </member>
-        <member name="P:EnterpriseTemplate.Domain.Users.UserRole.Role">
-            <summary>
-            Gets or sets the role.
             </summary>
         </member>
         <member name="T:EnterpriseTemplate.Domain.ValueObjects.Email">

@@ -360,22 +360,12 @@
         </member>
         <member name="T:EnterpriseTemplate.Application.Services.IPermissionService">
             <summary>
-            Service responsible for permission lookup and assignment.
+            Application-layer contract for resolving permission grants for authenticated users.
             </summary>
         </member>
-        <member name="M:EnterpriseTemplate.Application.Services.IPermissionService.UserHasPermissionAsync(System.Guid,System.String,System.Threading.CancellationToken)">
+        <member name="M:EnterpriseTemplate.Application.Services.IPermissionService.HasPermissionAsync(System.Guid,System.String,System.Threading.CancellationToken)">
             <summary>
-            Determines whether a user has the requested permission.
-            </summary>
-        </member>
-        <member name="T:EnterpriseTemplate.Application.Services.IRoleService">
-            <summary>
-            Service responsible for role management use cases.
-            </summary>
-        </member>
-        <member name="M:EnterpriseTemplate.Application.Services.IRoleService.AssignRoleAsync(System.Guid,System.Guid,System.Threading.CancellationToken)">
-            <summary>
-            Assigns a role to a user.
+            Determines whether the authenticated Identity user has the requested permission code through role membership.
             </summary>
         </member>
         <member name="T:EnterpriseTemplate.Application.Services.IUserService">
@@ -402,14 +392,6 @@
             <summary>
             Updates a user.
             </summary>
-        </member>
-        <member name="T:EnterpriseTemplate.Application.Services.PermissionService">
-            <summary>
-            Service responsible for permission checks.
-            </summary>
-        </member>
-        <member name="M:EnterpriseTemplate.Application.Services.PermissionService.UserHasPermissionAsync(System.Guid,System.String,System.Threading.CancellationToken)">
-            <inheritdoc />
         </member>
         <member name="T:EnterpriseTemplate.Application.Services.UserService">
             <summary>

@@ -19,20 +19,33 @@
             Gets the users aggregate set.
             </summary>
         </member>
-        <member name="P:EnterpriseTemplate.Persistence.ApplicationDbContext.DomainRoles">
-            <summary>
-            Gets roles.
-            </summary>
-        </member>
         <member name="P:EnterpriseTemplate.Persistence.ApplicationDbContext.Permissions">
             <summary>
             Gets permissions.
+            </summary>
+        </member>
+        <member name="P:EnterpriseTemplate.Persistence.ApplicationDbContext.RolePermissions">
+            <summary>
+            Gets permission grants assigned to ASP.NET Core Identity roles.
             </summary>
         </member>
         <member name="M:EnterpriseTemplate.Persistence.ApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="M:EnterpriseTemplate.Persistence.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:EnterpriseTemplate.Persistence.Authorization.PermissionService">
+            <summary>
+            EF Core permission resolver that maps Identity users to Identity roles and then to domain permissions.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Persistence.Authorization.PermissionService.#ctor(EnterpriseTemplate.Persistence.ApplicationDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:EnterpriseTemplate.Persistence.Authorization.PermissionService"/> class.
+            </summary>
+        </member>
+        <member name="M:EnterpriseTemplate.Persistence.Authorization.PermissionService.HasPermissionAsync(System.Guid,System.String,System.Threading.CancellationToken)">
             <inheritdoc />
         </member>
         <member name="T:EnterpriseTemplate.Persistence.Configurations.ApplicationUserConfiguration">
@@ -51,28 +64,12 @@
         <member name="M:EnterpriseTemplate.Persistence.Configurations.PermissionConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{EnterpriseTemplate.Domain.Authorization.Permission})">
             <inheritdoc />
         </member>
-        <member name="T:EnterpriseTemplate.Persistence.Configurations.RoleConfiguration">
-            <summary>
-            EF Core configuration for roles.
-            </summary>
-        </member>
-        <member name="M:EnterpriseTemplate.Persistence.Configurations.RoleConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{EnterpriseTemplate.Domain.Authorization.Role})">
-            <inheritdoc />
-        </member>
         <member name="T:EnterpriseTemplate.Persistence.Configurations.RolePermissionConfiguration">
             <summary>
-            EF Core configuration for role-permission assignments.
+            EF Core configuration for permission grants assigned to ASP.NET Core Identity roles.
             </summary>
         </member>
         <member name="M:EnterpriseTemplate.Persistence.Configurations.RolePermissionConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{EnterpriseTemplate.Domain.Authorization.RolePermission})">
-            <inheritdoc />
-        </member>
-        <member name="T:EnterpriseTemplate.Persistence.Configurations.UserRoleConfiguration">
-            <summary>
-            EF Core configuration for user-role assignments.
-            </summary>
-        </member>
-        <member name="M:EnterpriseTemplate.Persistence.Configurations.UserRoleConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{EnterpriseTemplate.Domain.Users.UserRole})">
             <inheritdoc />
         </member>
         <member name="T:EnterpriseTemplate.Persistence.DependencyInjection">
@@ -141,10 +138,10 @@
         </member>
         <member name="T:EnterpriseTemplate.Persistence.Seed.SeedData">
             <summary>
-            Seeds roles, permissions, and bootstrap data.
+            Seeds permissions and bootstrap Identity roles used as permission containers.
             </summary>
         </member>
-        <member name="M:EnterpriseTemplate.Persistence.Seed.SeedData.SeedAsync(EnterpriseTemplate.Persistence.ApplicationDbContext,System.Threading.CancellationToken)">
+        <member name="M:EnterpriseTemplate.Persistence.Seed.SeedData.SeedAsync(EnterpriseTemplate.Persistence.ApplicationDbContext,Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole{System.Guid}},System.Threading.CancellationToken)">
             <summary>
             Applies idempotent seed data.
             </summary>
