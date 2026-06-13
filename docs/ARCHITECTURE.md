@@ -13,14 +13,14 @@ The solution is intentionally split into `Presentation`, `Application`, `Domain`
 **Best practice:** keep controllers thin, keep persistence concerns out of domain entities, and register dependencies only through extension methods.
 
 ```text
-EnterpriseTemplate.sln
+spx.sln
 src/
-  EnterpriseTemplate.Presentation
-  EnterpriseTemplate.Application
-  EnterpriseTemplate.Domain
-  EnterpriseTemplate.Infrastructure
-  EnterpriseTemplate.Persistence
-  EnterpriseTemplate.Shared
+  spx.Presentation
+  spx.Application
+  spx.Domain
+  spx.Infrastructure
+  spx.Persistence
+  spx.Shared
 ```
 
 ## 2. Dependency Diagram
@@ -51,7 +51,7 @@ The persistence layer uses EF Core 8 with SQL Server, `ApplicationDbContext`, `I
 
 **Disadvantages:** extra mapping is required between Identity records and domain users.
 
-**Migration strategy:** create migrations in `EnterpriseTemplate.Persistence`, apply them through CI/CD, and never run destructive migrations automatically in production.
+**Migration strategy:** create migrations in `spx.Persistence`, apply them through CI/CD, and never run destructive migrations automatically in production.
 
 ## 4. Authentication Architecture
 

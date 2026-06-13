@@ -1,0 +1,12 @@
+namespace spx.Domain.Enums;
+
+/// <summary>
+/// Represents optional gender metadata.
+/// </summary>
+public enum Gender
+{
+    Unknown = 0,
+    Female = 1,
+    Male = 2,
+    Other = 3
+}

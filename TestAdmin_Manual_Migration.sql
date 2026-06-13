@@ -7,7 +7,7 @@ SET QUOTED_IDENTIFIER ON;
 GO
 
 /*
-    Manual SQL Server migration script for EnterpriseTemplate.Persistence.ApplicationDbContext.
+    Manual SQL Server migration script for spx.Persistence.ApplicationDbContext.
     Generated from the refactored active EF Core model because no EF Core migration files were found.
 
     Target authorization architecture:

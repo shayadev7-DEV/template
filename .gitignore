@@ -362,7 +362,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/.vs/EnterpriseTemplate/v17/.suo
+/.vs/spx/v17/.suo
 
 # Ignore Visual Studio build folders
 /bin/

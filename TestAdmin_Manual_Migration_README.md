@@ -4,7 +4,7 @@ This repository does not contain generated EF Core migration files, so `TestAdmi
 
 ## Detected DbContext names
 
-- `EnterpriseTemplate.Persistence.ApplicationDbContext`
+- `spx.Persistence.ApplicationDbContext`
   - Inherits from `IdentityDbContext<IdentityApplicationUser, IdentityRole<Guid>, Guid>`.
   - Registered with SQL Server through `AddDbContext<ApplicationDbContext>()`.
   - Uses the persistence assembly as the EF Core migrations assembly.
@@ -13,10 +13,10 @@ This repository does not contain generated EF Core migration files, so `TestAdmi
 
 No EF Core migration files were found in the project. The manual SQL was derived from:
 
-1. `src/EnterpriseTemplate.Persistence/ApplicationDbContext.cs`
-2. `src/EnterpriseTemplate.Persistence/DependencyInjection.cs`
-3. `src/EnterpriseTemplate.Persistence/Configurations/*.cs`
-4. `src/EnterpriseTemplate.Persistence/Seed/SeedData.cs`
+1. `src/spx.Persistence/ApplicationDbContext.cs`
+2. `src/spx.Persistence/DependencyInjection.cs`
+3. `src/spx.Persistence/Configurations/*.cs`
+4. `src/spx.Persistence/Seed/SeedData.cs`
 5. ASP.NET Core Identity's default EF Core schema for `IdentityDbContext<IdentityApplicationUser, IdentityRole<Guid>, Guid>`.
 
 ## Target authorization schema

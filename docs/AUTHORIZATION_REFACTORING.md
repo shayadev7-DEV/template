@@ -62,10 +62,10 @@ flowchart LR
 
 ## Entity changes
 
-- Removed `EnterpriseTemplate.Domain.Authorization.Role`.
-- Removed `EnterpriseTemplate.Domain.Users.UserRole`.
-- Updated `EnterpriseTemplate.Domain.Users.ApplicationUser` so it contains only business user state and behavior.
-- Updated `EnterpriseTemplate.Domain.Authorization.RolePermission` so it represents permission grants for Identity roles without referencing Identity framework types.
+- Removed `spx.Domain.Authorization.Role`.
+- Removed `spx.Domain.Users.UserRole`.
+- Updated `spx.Domain.Users.ApplicationUser` so it contains only business user state and behavior.
+- Updated `spx.Domain.Authorization.RolePermission` so it represents permission grants for Identity roles without referencing Identity framework types.
 
 ## DbContext and persistence changes
 
@@ -86,21 +86,21 @@ flowchart LR
 
 ## Code modifications by file
 
-- `src/EnterpriseTemplate.Domain/Users/ApplicationUser.cs`: removed domain role membership state from the business user aggregate.
-- `src/EnterpriseTemplate.Domain/Authorization/RolePermission.cs`: changed the role side to an Identity role id scalar and kept the permission navigation.
-- `src/EnterpriseTemplate.Persistence/ApplicationDbContext.cs`: removed `DomainRoles` and exposed `RolePermissions`.
-- `src/EnterpriseTemplate.Persistence/Configurations/ApplicationUserConfiguration.cs`: removed `UserRoles` navigation configuration.
-- `src/EnterpriseTemplate.Persistence/Configurations/RolePermissionConfiguration.cs`: mapped `RolePermission.RoleId` to `IdentityRole<Guid>`.
-- `src/EnterpriseTemplate.Persistence/Seed/SeedData.cs`: seeds permissions, the Identity Administrator role, and role-permission grants.
-- `src/EnterpriseTemplate.Application/Services/IPermissionService.cs`: renamed the contract to `HasPermissionAsync` and clarified that the input user id is the authenticated Identity user id.
-- `src/EnterpriseTemplate.Persistence/Authorization/PermissionService.cs`: added the EF Core permission resolver.
-- `src/EnterpriseTemplate.Application/DependencyInjection.cs`: removed the old application-layer stub permission service registration.
-- `src/EnterpriseTemplate.Persistence/DependencyInjection.cs`: registers the persistence permission resolver.
-- `src/EnterpriseTemplate.Presentation/Authorization/DynamicAuthorizationPolicyProvider.cs`: builds permission policies from direct permission code names while retaining legacy `Permission:` prefix support.
-- `src/EnterpriseTemplate.Presentation/Authorization/PermissionHandler.cs`: calls `HasPermissionAsync`.
-- `src/EnterpriseTemplate.Shared/Constants/PolicyNames.cs`: adds canonical permission policy constants.
-- `src/EnterpriseTemplate.Presentation/Controllers/UserController.cs`: uses permission policies directly.
-- `src/EnterpriseTemplate.Presentation/Controllers/RoleController.cs`: replaces role-based authorization with permission-based authorization.
-- `src/EnterpriseTemplate.Presentation/Controllers/PermissionController.cs`: replaces role-based authorization with permission-based authorization.
+- `src/spx.Domain/Users/ApplicationUser.cs`: removed domain role membership state from the business user aggregate.
+- `src/spx.Domain/Authorization/RolePermission.cs`: changed the role side to an Identity role id scalar and kept the permission navigation.
+- `src/spx.Persistence/ApplicationDbContext.cs`: removed `DomainRoles` and exposed `RolePermissions`.
+- `src/spx.Persistence/Configurations/ApplicationUserConfiguration.cs`: removed `UserRoles` navigation configuration.
+- `src/spx.Persistence/Configurations/RolePermissionConfiguration.cs`: mapped `RolePermission.RoleId` to `IdentityRole<Guid>`.
+- `src/spx.Persistence/Seed/SeedData.cs`: seeds permissions, the Identity Administrator role, and role-permission grants.
+- `src/spx.Application/Services/IPermissionService.cs`: renamed the contract to `HasPermissionAsync` and clarified that the input user id is the authenticated Identity user id.
+- `src/spx.Persistence/Authorization/PermissionService.cs`: added the EF Core permission resolver.
+- `src/spx.Application/DependencyInjection.cs`: removed the old application-layer stub permission service registration.
+- `src/spx.Persistence/DependencyInjection.cs`: registers the persistence permission resolver.
+- `src/spx.Presentation/Authorization/DynamicAuthorizationPolicyProvider.cs`: builds permission policies from direct permission code names while retaining legacy `Permission:` prefix support.
+- `src/spx.Presentation/Authorization/PermissionHandler.cs`: calls `HasPermissionAsync`.
+- `src/spx.Shared/Constants/PolicyNames.cs`: adds canonical permission policy constants.
+- `src/spx.Presentation/Controllers/UserController.cs`: uses permission policies directly.
+- `src/spx.Presentation/Controllers/RoleController.cs`: replaces role-based authorization with permission-based authorization.
+- `src/spx.Presentation/Controllers/PermissionController.cs`: replaces role-based authorization with permission-based authorization.
 - `TestAdmin_Manual_Migration.sql`: updates the manual SQL schema and legacy role migration steps.
 - `TestAdmin_Manual_Migration_README.md`: documents the refactored schema and execution order.
